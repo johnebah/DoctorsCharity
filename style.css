@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #0038FF;
+    border-color: #0038FF;
+}
+
+.btn-primary:hover {
+    background-color: #002cd9;
+    border-color: #002cd9;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-top: 76px;
+    color: white;
+}
+
+.hero .carousel-item {
+    height: 600px;
+}
+
+.hero .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    margin-right: 1rem;
+    padding: 0.75rem 2rem;
+}
+
+/* Mission Section */
+.mission {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.mission h2 {
+    margin-bottom: 2rem;
+}
+
+.mission-dots {
+    margin: 2rem 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.dot.active {
+    background-color: #0038FF;
+}
+
+/* Initiatives Section */
+.initiatives {
+    padding: 5rem 0;
+}
+
+.initiative-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.initiative-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.initiative-card:hover img {
+    transform: scale(1.05);
+}
+
+.initiative-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+.donation-amount {
+    color: #0038FF;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.initiative-card p {
+    margin: 1rem;
+    font-size: 0.9rem;
+}
+
+.initiative-card .btn {
+    margin: 1rem;
+}
+
+/* Volunteer Section */
+.volunteer {
+    position: relative;
+    color: white;
+}
+
+.volunteer .carousel-item {
+    height: 500px;
+}
+
+.volunteer .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.volunteer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.gallery img {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gallery .carousel {
+    padding: 2rem 0;
+}
+
+/* Telemedicine Section */
+.telemedicine {
+    position: relative;
+    color: white;
+}
+
+.telemedicine-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem 0;
+}
+
+.telemedicine-content {
+    max-width: 500px;
+}
+
+.telemedicine h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.telemedicine p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    padding: 3rem 0;
+    border-top: 1px solid #eee;
+}
+
+footer nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.social-links {
+    margin: 2rem 0;
+}
+
+.social-links a {
+    color: #333;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+.copyright {
+    color: #666;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .btn {
+        margin: 0.5rem 0;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        margin: 1rem 0;
+    }
+    
+    footer nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .gallery .carousel-item .row {
+        margin: 0;
+    }
+
+    .gallery img {
+        margin-bottom: 1rem;
+    }
+    
+    .telemedicine-bg {
+        padding: 4rem 0;
+    }
+
+    .telemedicine h2 {
+        font-size: 2rem;
+    }
+}
