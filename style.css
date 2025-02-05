@@ -1,293 +1,510 @@
-/* General Styles */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Crimson Text', serif;
+    line-height: 1.6;
     color: #333;
 }
 
-.btn-primary {
-    background-color: #0038FF;
-    border-color: #0038FF;
-}
-
-.btn-primary:hover {
-    background-color: #002cd9;
-    border-color: #002cd9;
-}
-
 /* Navigation */
-.navbar {
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #02087D;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Buttons */
+.btn-volunteer, .btn-donate, .btn-contact {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-volunteer {
+    background: white;
+    color: #02087D;
+    border: 2px solid #02087D;
+}
+
+.btn-donate {
+    background: #02087D;
+    color: white;
+}
+
+.btn-contact {
+    background: #02087D;
+    color: white;
+    padding: 1rem 2rem;
 }
 
 /* Hero Section */
 .hero {
+    height: 100vh;
     position: relative;
-    margin-top: 76px;
-    color: white;
+    overflow: hidden;
 }
 
-.hero .carousel-item {
-    height: 600px;
-}
-
-.hero .carousel-item img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.5);
-}
-
-.hero-content {
+.slide {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 600px;
-    padding: 0 1rem;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: url('https://placehold.co/1920x1080') center/cover no-repeat;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2,8,125,0.7);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 8rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero h1 {
     font-size: 3.5rem;
-    font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.hero-buttons .btn {
-    margin-right: 1rem;
-    padding: 0.75rem 2rem;
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
 /* Mission Section */
-.mission {
-    padding: 5rem 0;
-    background-color: #f8f9fa;
+.mission-section {
+    padding: 5rem 5%;
+    text-align: center;
+    position: relative;
 }
 
-.mission h2 {
-    margin-bottom: 2rem;
+.mission-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 300px;
 }
 
-.mission-dots {
-    margin: 2rem 0;
+.mission-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mission-slide.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    margin: 0 5px;
+    background: #ddd;
+    cursor: pointer;
 }
 
 .dot.active {
-    background-color: #0038FF;
+    background: #02087D;
 }
 
 /* Initiatives Section */
 .initiatives {
-    padding: 5rem 0;
+    padding: 5rem 5%;
+    background: #f9f9f9;
 }
 
-.initiative-card {
+.initiative-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
     background: white;
+    padding: 1.5rem;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.initiative-card img {
+.card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
-.initiative-card:hover img {
-    transform: scale(1.05);
+.donation-info {
+    margin: 1rem 0;
 }
 
-.initiative-card h3 {
-    font-size: 1.25rem;
-    margin: 1rem;
+.progress-container {
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: 10px;
+    margin: 0.5rem 0;
+    overflow: hidden;
 }
 
-.donation-amount {
-    color: #0038FF;
-    font-weight: bold;
-    margin: 1rem;
+.progress-bar {
+    height: 100%;
+    background: #02087D;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
 }
 
-.initiative-card p {
-    margin: 1rem;
+.progress-text {
     font-size: 0.9rem;
+    color: #666;
 }
 
-.initiative-card .btn {
-    margin: 1rem;
-}
-
-/* Volunteer Section */
-.volunteer {
+/* Volunteer Banner */
+.volunteer-banner {
+    background: url('https://placehold.co/1920x1080') center/cover no-repeat;
     position: relative;
+    padding: 5rem 5%;
+    text-align: center;
     color: white;
 }
 
-.volunteer .carousel-item {
-    height: 500px;
-}
-
-.volunteer .carousel-item img {
+.volunteer-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(0.4);
+    background: rgba(0,0,0,0.5);
 }
 
-.volunteer-content {
+.volunteer-banner .content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Gallery */
+.gallery {
+    padding: 5rem 5%;
+}
+
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide {
+    flex: 0 0 20%;
+    padding: 0 10px;
+}
+
+.gallery-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-prev,
+.gallery-next {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 0 1rem;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
-/* Gallery Section */
-.gallery {
-    padding: 5rem 0;
-    background-color: #f8f9fa;
+.gallery-prev {
+    left: 10px;
 }
 
-.gallery img {
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    height: 300px;
-    object-fit: cover;
-    width: 100%;
-}
-
-.gallery .carousel {
-    padding: 2rem 0;
+.gallery-next {
+    right: 10px;
 }
 
 /* Telemedicine Section */
 .telemedicine {
+    background: url('https://placehold.co/1920x1080') center/cover no-repeat;
     position: relative;
+    padding: 5rem 5%;
+    text-align: center;
     color: white;
 }
 
-.telemedicine-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 8rem 0;
+.telemedicine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
 }
 
-.telemedicine-content {
-    max-width: 500px;
-}
-
-.telemedicine h2 {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.telemedicine p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+.telemedicine .content {
+    position: relative;
+    z-index: 1;
 }
 
 /* Footer */
 footer {
-    padding: 3rem 0;
-    border-top: 1px solid #eee;
+    background: white;
+    padding: 3rem 5%;
 }
 
-footer nav a {
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
     color: #333;
     text-decoration: none;
-    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #02087D;
 }
 
 .social-links {
-    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.social-links a {
-    color: #333;
-    margin-left: 1rem;
-    font-size: 1.25rem;
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.facebook {
+    background-image: url('https://placehold.co/40x40');
+}
+
+.instagram {
+    background-image: url('https://placehold.co/40x40');
+}
+
+.linkedin {
+    background-image: url('https://placehold.co/40x40');
 }
 
 .copyright {
-    color: #666;
+    text-align: center;
+    margin-top: 1rem;
 }
 
-/* Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 1.5rem;
-}
-
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hamburger menu animation */
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Footer responsive styles */
+    .footer-content {
+        gap: 3rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-links a {
+        display: block;
+        padding: 0.8rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .footer-links a:last-child {
+        border-bottom: none;
+    }
+
+    .social-links {
+        padding: 1rem 0;
+    }
+
+    /* Rest of your existing mobile styles */
     .hero h1 {
         font-size: 2.5rem;
     }
     
-    .navbar-nav {
-        text-align: center;
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .navbar-nav .btn {
-        margin: 0.5rem 0;
+    .initiative-cards {
+        grid-template-columns: 1fr;
     }
     
-    .hero-buttons .btn {
-        display: block;
-        margin: 1rem 0;
+    .gallery-slide {
+        flex: 0 0 50%;
     }
-    
-    footer nav a {
-        display: block;
-        margin: 0.5rem 0;
+}
+
+@media (max-width: 480px) {
+    .gallery-slide {
+        flex: 0 0 100%;
     }
 
-    .gallery .carousel-item .row {
-        margin: 0;
+    .footer-content {
+        gap: 2rem;
     }
 
-    .gallery img {
-        margin-bottom: 1rem;
+    .social-links {
+        gap: 1.5rem;
     }
-    
-    .telemedicine-bg {
-        padding: 4rem 0;
-    }
+}
 
-    .telemedicine h2 {
-        font-size: 2rem;
+/* Animations */
+.btn-volunteer:hover, .btn-donate:hover, .btn-contact:hover {
+    transform: translateY(-2px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }
