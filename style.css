@@ -100,7 +100,7 @@ nav {
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    background: url('https://placehold.co/1920x1080') center/cover no-repeat;
+    background: url('hero.png') center/cover no-repeat;
 }
 
 .slide::before {
