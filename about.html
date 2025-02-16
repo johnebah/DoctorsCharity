@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Doctors Charity</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Doctors Charity Logo">
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Our Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="volunteer.html" class="btn btn-outline">Volunteer</a>
+                <a href="donate.html" class="btn btn-primary">Donate</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-images">
+                <!-- <img src="img/squad.png" alt="Doctors helping patients" class="hero-image"> -->
+                <img src="img/feed-a-friend.png" alt="Medical outreach" class="hero-image">
+                <img src="img/join3.png" alt="Community healthcare" class="hero-image">
+                <img src="img/gallery4.png" alt="Medical education" class="hero-image"> 
+            </div>
+            <h1>We Are Doctors Charity</h1>
+            <p>Empowering Doctors, Transforming Lives: Bridging The Healthcare Gap We Connect Skilled Healthcare Workers With Communities In Need, Making A Lasting Impact.</p>
+            <div class="under-hero-images">
+                <img src="img/gallery2.png" alt="Healthcare workers" class="hero-image">
+                <img src="img/hold-book.png" alt="Medical volunteers" class="hero-image">
+            </div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <div class="about-content">
+                <p>Established In 2008 By A Team Of Visionary Doctors, Doctors Charity Is A Multi-Service Non-Profit Based In New York Helping People Worldwide. Currently We Operate In The U.S And Africa To Deliver Medical Care And Equipment, Health And Education, Mindfulness, And Investment In Agriculture In Communities That Need It The Most. We Have Six Major Projects Reaching Hundreds Of People In Need.</p>
+                
+                <p>Our Mission Area Is To Build A Legacy Of Service, We Ensure That What Medical Professionals The World Over Will See As Their Jobs Are Of Their Root Sociable From Their Own Communities To Our Own Communities. We Act Above Simply Serving As The People And Service To The Community.</p>
+                
+                <p>We Design A World In Which Medical Professionals And Other Healthcare Providers Would Make Service To Their People, Their Communities, And Neighboring Communities An Integral Part Of Their Monthly Schedule.</p>
+                
+                <p>We Believe That By Coming Together, We Can Build For The World A Big Global Community Of Medical Care Where We Are All Responsible To The Wellbeing And Care Of Each Other And A World Where No One Gets Bankrupt As A Result Of Falling Ill Or Use All Of Cash Due To Poverty.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>Every Person Deserves Access To Life Improving And Lifesaving Information, Medical Care, And Economic Opportunities To Support Their Families. We Are Dedicated To Providing Medical Care And Resources To The Economically Disadvantaged. Our Mission Is To Deploy Effective And Coordinated Efforts To Ensure People Gain Access To Qualitative Medical Care, And Economic Resources.</p>
+            <div class="mission-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+            <div class="mission-controls">
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="work-with">
+        <div class="container">
+            <h2>Who We Work With</h2>
+            <div class="work-with-content">
+                <div class="work-with-text">
+                    <p>DOCTORS CHARITY Partners For Projects To Assist Medical Professionals To Deliver Medical Care, Equipment, Supplies And Medical Training In The U.S. And The Developing World. We Invite Doctors And Other Professionals Interested In Joining Youth Communities To Volunteer On Any Number Of Our Projects. And/Or Donate Funds To Assist In The Deployment Of These Key Projects. There Are So Many Ways To Give Back. We Have Focused On These Core Areas:</p>
+                    <p>Service: Delivering Pro Bono Medical Services Via Home Visits And Medical Missions Abroad. Resource Distribution: Providing Medical Equipment To Communities That Need It. Financing: Rallying Funds To Support Microfinancing And Farming Initiatives.</p>
+                </div>
+                <div class="work-with-image">
+                    <img src="img/hands.png" alt="Hands joining together in support">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="partners">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partners-content">
+                <div class="partners-image">
+                    <img src="img/hands.png" alt="Hands joining together in partnership">
+                </div>
+                <div class="partners-text">
+                    <p>You Can Also Partner With Us By Donating To Any Of Our Projects Today. You Can Also Donate Medical Equipment Targeted A Poorly Served Communities In West Africa.</p>
+                    <a href="donate.html" class="donate-btn">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+        
+        // Resize handler
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+        
+        // Mission slider functionality
+        const indicators = document.querySelectorAll('.mission-indicators .indicator');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+        
+        // Function to update the active indicator
+        function updateIndicators(index) {
+            indicators.forEach((indicator, i) => {
+                if (i === index) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+        
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateIndicators(currentSlide);
+            });
+        });
+        
+        // Previous button click
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + indicators.length) % indicators.length;
+            updateIndicators(currentSlide);
+        });
+        
+        // Next button click
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % indicators.length;
+            updateIndicators(currentSlide);
+        });
+    </script>
+</body>
+</html>
