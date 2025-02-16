@@ -31,11 +31,29 @@ header {
     z-index: 1000;
 }
 
-
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative; /* Add this */
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    position: absolute; /* Add this */
+    right: 20px;       /* Add this */
+    top: 50%;          /* Add this */
+    transform: translateY(-50%); /* Add this */
+    z-index: 102;      /* Add this */
 }
 
 .logo {
@@ -304,15 +322,6 @@ nav ul li a:hover {
 }
 
 /* Responsive styles */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-
 @media (max-width: 768px) {
     .hero-images {
         height: 150px;
