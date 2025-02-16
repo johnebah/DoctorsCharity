@@ -389,4 +389,100 @@ nav ul li a:hover {
     .partners-image {
         text-align: center;
     }
+
+    /* Footer responsive styles */
+    .footer-content {
+        gap: 3rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-links a {
+        display: block;
+        padding: 0.8rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .footer-links a:last-child {
+        border-bottom: none;
+    }
+
+    .social-links {
+        padding: 1rem 0;
+    }
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 3rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #02087D;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.facebook {
+    background-image: url('https://placehold.co/40x40');
+}
+
+.instagram {
+    background-image: url('https://placehold.co/40x40');
+}
+
+.linkedin {
+    background-image: url('https://placehold.co/40x40');
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 1rem;
 }
