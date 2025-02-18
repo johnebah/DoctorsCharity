@@ -2,13 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Crimson Text', sans-serif;
 }
 
 body {
     line-height: 1.6;
     color: #333;
-    
     /* Add this to push content below the fixed header */
     padding-top: 80px; /* Adjust this value based on your header height */
 }
@@ -26,10 +25,12 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 0;
+    /* background-color: rgba(255, 255, 255, 0.95); */
     background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
 }
+
 
 .nav-container {
     display: flex;
@@ -113,67 +114,69 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Hero section */
- .hero {
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 0;
-    position: relative;
+    height: 100vh; /* Full screen height */
+    /* background: #f8f9fa; */
+    background: white;
+    overflow: hidden;
+    padding: 50px 20px;
 }
 
-.hero-images {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.hero-image {
-    width: 150px;
+/* Centered text content */
+.text-content {
+    max-width: 950px;
+    z-index: 2;
+    /* background: #f8f9fa;  */
+    padding: 20px;
     border-radius: 10px;
-    position: absolute;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-.hero-image:nth-child(1) {
-    left: 10%;
-    top: 0;
-}
-
-.hero-image:nth-child(2) {
-    left: 30%;
-    top: -30px;
-}
-
-.hero-image:nth-child(3) {
-    right: 30%;
-    top: -30px;
-}
-
-.hero-image:nth-child(4) {
-    right: 10%;
-    top: 0;
-}
-
-.hero-image:nth-child(5) {
-    left: 20%;
-    bottom: -100px;
-}
-
-.hero-image:nth-child(6) {
-    right: 20%;
-    bottom: -100px;
-}
-
-.hero h1 {
-    color: #3a4cb3;
+.text-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    color: #11277a;
+    position: relative;
+    z-index: 3; /* Ensures text is above images */
 }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto;
-    color: #666;
-    font-size: 1rem;
+.text-content p {
+    font-size: 1.2rem;
+    color: #444;
+    position: relative;
+    z-index: 3;
 }
+
+/* Hero Images */
+
+/* Increase height for left and right images */
+.hero-image {
+    position: absolute;
+    width: 130px; /* Keep width same */
+    height: 180px; /* Increase height */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Ensure images scale properly */
+}
+
+/* Floating effect */
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+/* Individual image placements with taller height */
+.img1 { top: 5%; left: 15%; height: 200px; } /* Top left */
+.img2 { top: 5%; right: 15%; height: 200px; } /* Top right */
+.img3 { bottom: 10%; left: 20%; height: 200px; } /* Left bottom */
+.img4 { bottom: 10%; right: 20%; height: 200px; } /* Right bottom */
+.img5 { top: 45%; left: 5%; height: 220px; } /* Mid left - Taller */
+.img6 { top: 45%; right: 5%; height: 220px; } /* Mid right - Taller */
+
 
 /* About section */
 .about {
@@ -199,7 +202,7 @@ nav ul li a:hover {
 /* Mission section */
 .mission {
     padding: 60px 0;
-    background-color: #f9f9f9;
+    background-color: white;
     text-align: center;
 }
 
@@ -321,31 +324,114 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* Add these footer styles to your existing CSS */
+.footer-content {
+    padding: 60px 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-footer {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo {
+    flex: 1;
+    height: 50px;
+}
+
+.footer-logo img {
+    height: 100%;
+}
+
+.footer-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-nav a {
+    padding: 0 15px; /* Adjust the padding as needed */
+    color: #333; /* Set the desired color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Add transition for hover effect */
+}
+
+.footer-nav a:hover {
+    color: #3a4cb3; /* Set the hover color */
+}
+
+.second-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.social-links {
+    flex: 1;
+}
+
+hr {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #666;
+    transition: color 0.3s;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f5f5f5;
+}
+
+.social-links a:hover {
+    background: #e8e8e8;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    text-align: right;
+    color: #666;
+}
+
+
 /* Responsive styles */
+
 @media (max-width: 768px) {
-    .hero-images {
-        height: 150px;
-        margin-bottom: 20px;
-    }
-    
     .hero-image {
-        width: 80px;
+        display: none; /* Hides all images */
     }
-    
-    .hero-image:nth-child(3),
-    .hero-image:nth-child(4),
-    .hero-image:nth-child(5), 
-    .hero-image:nth-child(6) {
-        display: none;
+    .hero {
+        height: auto; /* Adjust height dynamically */
+        display: flex;
+        flex-direction: column; /* Stack content */
+        justify-content: center;
+        align-items: center;
+        padding: 30px 15px; /* Reduce padding */
     }
-    
-    .hero-image:nth-child(1) {
-        left: 25%;
-    }
-    
-    .hero-image:nth-child(2) {
-        right: 25%;
-        left: auto;
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
     }
     
     .nav-menu {
@@ -355,6 +441,7 @@ nav ul li a:hover {
         width: 80%;
         height: 100vh;
         background: #fff;
+        /* background: white; */
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -399,99 +486,52 @@ nav ul li a:hover {
         text-align: center;
     }
 
-    /* Footer responsive styles */
-    .footer-content {
-        gap: 3rem;
-    }
-
-    .footer-links {
+    /* Footer */
+    .first-footer {
         flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        text-align: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .footer-links a {
-        display: block;
-        padding: 0.8rem;
-        border-bottom: 1px solid #eee;
+    .footer-logo {
+        margin-bottom: 20px;
     }
 
-    .footer-links a:last-child {
-        border-bottom: none;
+    .footer-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+        padding: 10px 15px; /* Adjust the padding as needed */
+    }
+
+    .second-footer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
     }
 
     .social-links {
-        padding: 1rem 0;
+        justify-content: center;
+        margin-bottom: 20px;
     }
-}
 
-/* Footer */
-footer {
-    background: white;
-    padding: 3rem 5%;
-}
+    .copyright {
+        text-align: center;
+    }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    /* Hamburger menu animation */
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
 
-.footer-links a {
-    color: #333;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #02087D;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-2px);
-}
-
-.facebook {
-    background-image: url('https://placehold.co/40x40');
-}
-
-.instagram {
-    background-image: url('https://placehold.co/40x40');
-}
-
-.linkedin {
-    background-image: url('https://placehold.co/40x40');
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 1rem;
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
 }
