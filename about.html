@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Doctors Charity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
@@ -15,35 +19,34 @@
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Our Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
             <div class="cta-buttons">
-                <a href="volunteer.html" class="btn btn-outline">Volunteer</a>
-                <a href="donate.html" class="btn btn-primary">Donate</a>
+                <a href="#volunteer.html" class="btn btn-outline">Volunteer</a>
+                <a href="#donate.html" class="btn btn-primary">Donate</a>
             </div>
         </div>
     </header>
     
     <section class="hero">
         <div class="container">
-            <div class="hero-images">
-                <!-- <img src="img/squad.png" alt="Doctors helping patients" class="hero-image"> -->
-                <img src="img/feed-a-friend.png" alt="Medical outreach" class="hero-image">
-                <img src="img/join3.png" alt="Community healthcare" class="hero-image">
-                <img src="img/gallery4.png" alt="Medical education" class="hero-image"> 
+            <div class="text-content">
+                <h1>We Are Doctors Charity</h1>
+                <p>Empowering Doctors, Transforming Lives: Bridging The Healthcare Gap. We Connect Skilled Healthcare Workers With Communities In Need, Making A Lasting Impact.</p>
             </div>
-            <h1>We Are Doctors Charity</h1>
-            <p>Empowering Doctors, Transforming Lives: Bridging The Healthcare Gap We Connect Skilled Healthcare Workers With Communities In Need, Making A Lasting Impact.</p>
-            <div class="under-hero-images">
-                <img src="img/gallery2.png" alt="Healthcare workers" class="hero-image">
-                <img src="img/hold-book.png" alt="Medical volunteers" class="hero-image">
-            </div>
+    
+            <!-- Images floating around the text -->
+            <img src="img/feed-a-friend.png" alt="Medical outreach" class="hero-image img1">
+            <img src="img/join3.png" alt="Medical volunteers" class="hero-image img2">
+            <img src="img/gallery2.png" alt="Doctors helping patients" class="hero-image img3">
+            <img src="img/hold-book.png" alt="Doctors helping patients" class="hero-image img4">
+            <img src="img/gallery5.png" alt="Healthcare workers" class="hero-image img5">
+            <img src="img/gallery4.png" alt="Medical volunteers" class="hero-image img6">
         </div>
     </section>
+    
     
     <section class="about">
         <div class="container">
@@ -70,9 +73,9 @@
                 <span class="indicator"></span>
                 <span class="indicator"></span>
             </div>
-            <div class="mission-controls">
-                <button class="prev-btn">&lt;</button>
-                <button class="next-btn">&gt;</button>
+            <div class="mission-controls" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                <button class="prev-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&lt;</button>
+                <button class="next-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&gt;</button>
             </div>
         </div>
     </section>
@@ -101,33 +104,57 @@
                 </div>
                 <div class="partners-text">
                     <p>You Can Also Partner With Us By Donating To Any Of Our Projects Today. You Can Also Donate Medical Equipment Targeted A Poorly Served Communities In West Africa.</p>
-                    <a href="#donate" class="donate-btn">Donate Now</a>
+                    <a href="donate.html" class="donate-btn">Donate Now</a>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <img src="img/logo.png" alt="Logo" style="width:150px;height:90px;">
+            
+            <div class="first-footer">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Doctors Charity Logo">
+                </div>
+                
+                <nav class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="shop.html">Shop</a>
+                </nav>
             </div>
-            <div class="footer-links">
-                <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="#projects">Our Projects</a>
-                <a href="#shop">Shop</a>
-                <a href="#contact">Contact Us</a>
+            
+            <hr>
+            
+            <div class="second-footer">
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    © Copyright 2025 Doctors Charity
+                </div>
             </div>
-            <div class="social-links">
-                <a href="#" class="social-icon facebook" aria-label="Facebook"></a>
-                <a href="#" class="social-icon instagram" aria-label="Instagram"></a>
-                <a href="#" class="social-icon linkedin" aria-label="LinkedIn"></a>
-            </div>
-            <p class="copyright">© Copyright 2025 Doctors Charity</p>
         </div>
     </footer>
-    
+
+
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
