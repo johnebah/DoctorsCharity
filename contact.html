@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- https://favicon.io/emoji-favicons/money-bag/ -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>Contact Us - Doctors Charity</title>
+    <link rel="stylesheet" href="contact.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="logo">
+                <img src="img/logo.png" alt="Doctors Charity Logo">
+            </div>
+            <div class="desktop-menu">
+                <div class="links">
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Our Services</a>
+                </div>
+                <div class="buttons">
+                    <a href="contact.html"><button class="btn btn-primary">Contact Us</button></a>
+                </div>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/services">Our Services</a>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-outline">Volunteer</button>
+                <button class="btn btn-primary">Contact Us</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-section">
+            <img src="img/gallery3.png" alt="Woman on phone" class="contact-image">
+            
+            <div class="contact-form">
+                
+                <div style="text-align: center;">
+                    <h1>Contact Us Today!</h1>
+                    <p style="text-indent: 20px; font-size: small;">Got Questions? Send Them In</p>
+                </div>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="JohnDoe@Gmail.Com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Enter Message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="first-footer">
+                <div class="footer-logo" style="background-color: blue;">
+                    <img src="img/logo.png" alt="Doctors Charity Logo">
+                </div>
+                
+                <div class="footer-div">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Our Services</a>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="second-footer">
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    © Copyright 2025 Doctors Charity
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
