@@ -100,7 +100,7 @@ nav {
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    background: url('img/hero.jpg') center/cover no-repeat;
+    background: url('img/hero.png') center/cover no-repeat;
 }
 
 .slide::before {
