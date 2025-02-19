@@ -12,10 +12,49 @@ hr {
     flex-direction: column;
     align-items: center;
 }
+/* .first-footer {
+    padding: 0 60px; Keep padding on the right, remove from left
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.footer-logo {
+    padding-left: 0; Ensure no padding
+    margin-left: 0; Remove any margin
+    flex: 0; Prevent stretching
+    width: 149px;
+    height: 134px;
+}
+
+.footer-logo img {
+    display: block; Removes any inline spacing
+    width: 100%;
+    height: auto;
+} */
 .first-footer {
-    padding-left: 60px;
-    align-items: center; /* Center everything horizontally */
+    padding-right: 60px;
+    padding-left: 0; /* Ensures no left padding */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; /* Ensures proper alignment */
+}
+
+.footer-logo {
+    flex-shrink: 0; /* Prevents shrinking */
+    width: 149px;
+    height: 134px;
+    display: block; /* Ensures visibility */
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes inline spacing */
+}
+/* .first-footer {
+    align-items: center; 
     padding-right: 60px;
     display: flex;
     justify-content: space-between;
@@ -32,7 +71,7 @@ hr {
 
 .footer-logo img {
     height: 100%;
-}
+} */
 
 .footer-div {
     display: flex;
@@ -94,11 +133,13 @@ hr {
 }
 
 @media (max-width: 768px) {
-    /* Footer */
     footer {
         background-color: #f8f9fa;
-        padding: 20px 0;
+        /* padding: 20px 0; */
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .footer-content {
@@ -106,13 +147,8 @@ hr {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-    }
-    
-    .footer-logo img {
-        width: 150px; /* Adjust size as needed */
-        display: block;
-        margin: 0 auto 15px;
-        transition: transform 0.3s ease-in-out;
+        width: 100%;
+        max-width: 600px;
     }
     
     .footer-logo img:hover {
@@ -123,6 +159,8 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         gap: 10px;
     }
     
@@ -148,7 +186,7 @@ hr {
         width: 0;
         height: 2px;
         background-color: #000;
-        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
     }
     
     .footer-div a:hover::after {
@@ -185,4 +223,25 @@ hr {
     .copyright {
         margin-top: 10px;
     }
+
+    .first-footer {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center everything */
+        text-align: center;
+        padding: 0; /* Remove side padding */
+    }
+
+    .footer-logo {
+        order: -1; /* Moves logo above everything */
+        width: 249px;
+        height: 234px;
+        margin-bottom: 10px; /* Adds spacing after logo */
+    }
+
+    .footer-logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
 }
