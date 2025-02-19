@@ -185,7 +185,7 @@ nav ul li a:hover {
 
 .about h2 {
     text-align: center;
-    color: #3a4cb3;
+    color: black;
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -197,27 +197,18 @@ nav ul li a:hover {
 
 .about-content p {
     margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
 }
+
+
 
 /* Mission section */
-.mission {
-    padding: 60px 0;
-    background-color: white;
+.Mission {
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
-
-.mission h2 {
-    color: #3a4cb3;
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.mission p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    color: #555;
-}
-
 .mission-indicators {
     display: flex;
     justify-content: center;
@@ -237,6 +228,36 @@ nav ul li a:hover {
     background-color: #3a4cb3;
 }
 
+/* Smooth fade and slide animation */
+.fade-out {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+
+/* Indicator animation */
+.mission-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Active indicator effect */
+.mission-indicators .indicator.active {
+    background-color: #3a4cb3;
+    transform: scale(1.3); /* Slight scale-up for active indicator */
+    box-shadow: 0px 0px 8px rgba(58, 76, 179, 0.5); /* Soft glow effect */
+}
+
 /* Work With section */
 .work-with {
     padding: 60px 0;
@@ -244,7 +265,7 @@ nav ul li a:hover {
 
 .work-with h2 {
     text-align: center;
-    color: #3a4cb3;
+    color: black;
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -275,12 +296,11 @@ nav ul li a:hover {
 /* Partners section */
 .partners {
     padding: 60px 0;
-    background-color: #f9f9f9;
 }
 
 .partners h2 {
     text-align: center;
-    color: #3a4cb3;
+    color: black;
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -324,93 +344,6 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Add these footer styles to your existing CSS */
-.footer-content {
-    padding: 60px 0;
-    padding-left: 60px;
-    padding-right: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.first-footer {
-    padding-left: 60px;
-    padding-right: 60px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer-logo {
-    flex: 1;
-    height: 50px;
-}
-
-.footer-logo img {
-    height: 100%;
-}
-
-.footer-nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer-nav a {
-    padding: 0 15px; /* Adjust the padding as needed */
-    color: #333; /* Set the desired color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Add transition for hover effect */
-}
-
-.footer-nav a:hover {
-    color: #3a4cb3; /* Set the hover color */
-}
-
-.second-footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.social-links {
-    flex: 1;
-}
-
-hr {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.social-links a {
-    color: #666;
-    transition: color 0.3s;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #f5f5f5;
-}
-
-.social-links a:hover {
-    background: #e8e8e8;
-    transform: translateY(-2px);
-}
-
-.copyright {
-    text-align: right;
-    color: #666;
-}
 
 
 /* Responsive styles */
@@ -486,42 +419,6 @@ hr {
         text-align: center;
     }
 
-    /* Footer */
-    .first-footer {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .footer-logo {
-        margin-bottom: 20px;
-    }
-
-    .footer-nav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .footer-nav a {
-        padding: 10px 15px; /* Adjust the padding as needed */
-    }
-
-    .second-footer {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .social-links {
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .copyright {
-        text-align: center;
-    }
-
     /* Hamburger menu animation */
     .mobile-menu-toggle.active span:first-child {
         transform: rotate(45deg) translate(6px, 6px);
@@ -535,5 +432,3 @@ hr {
         transform: rotate(-45deg) translate(6px, -6px);
     }
 }
-
-
