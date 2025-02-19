@@ -9,17 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <img src="img/logo.png" alt="Doctors Charity Logo">
+                <img src="img/logo2.png" alt="Doctors Charity Logo">
             </div>
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Our Services</a></li>
                 </ul>
@@ -34,7 +35,11 @@
         <div class="container">
             <div class="text-content">
                 <h1>We Are Doctors Charity</h1>
-                <p>Empowering Doctors, Transforming Lives: Bridging The Healthcare Gap. We Connect Skilled Healthcare Workers With Communities In Need, Making A Lasting Impact.</p>
+                <p>
+                    Empowering Doctors, Transforming Lives: 
+                    Bridging The Healthcare Gap. We Connect Skilled Healthcare Workers 
+                    With Communities In Need, Making A Lasting Impact.
+                </p>
             </div>
     
             <!-- Images floating around the text -->
@@ -52,31 +57,68 @@
         <div class="container">
             <h2>Who We Are</h2>
             <div class="about-content">
-                <p>Established In 2008 By A Team Of Visionary Doctors, Doctors Charity Is A Multi-Service Non-Profit Based In New York Helping People Worldwide. Currently We Operate In The U.S And Africa To Deliver Medical Care And Equipment, Health And Education, Mindfulness, And Investment In Agriculture In Communities That Need It The Most. We Have Six Major Projects Reaching Hundreds Of People In Need.</p>
-                
-                <p>Our Mission Area Is To Build A Legacy Of Service, We Ensure That What Medical Professionals The World Over Will See As Their Jobs Are Of Their Root Sociable From Their Own Communities To Our Own Communities. We Act Above Simply Serving As The People And Service To The Community.</p>
-                
-                <p>We Design A World In Which Medical Professionals And Other Healthcare Providers Would Make Service To Their People, Their Communities, And Neighboring Communities An Integral Part Of Their Monthly Schedule.</p>
-                
-                <p>We Believe That By Coming Together, We Can Build For The World A Big Global Community Of Medical Care Where We Are All Responsible To The Wellbeing And Care Of Each Other And A World Where No One Gets Bankrupt As A Result Of Falling Ill Or Use All Of Cash Due To Poverty.</p>
+                <p>
+                    Established In 2008 By A Team Of Visionary Doctors, 
+                    Doctors Charity Is A Multi-Service Non-Profit Based In New York 
+                    Helping People Worldwide. Currently We Operate In The U.S And Africa To Deliver 
+                    Medical Care And Equipment, Health And Education, Mindfulness, 
+                    And Investment In Agriculture In Communities That Need It The Most. 
+                    We Have Six Major Projects Reaching Hundreds Of People In Need.
+                </p> 
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Building a Legacy of Service</h2>
+            <div class="about-content">
+                <p>
+                    Our ultimate aim is to build a legacy of service, 
+                    We envision a day when medical professionals the world over will 
+                    set a day aside out of their busy schedule every month to volunteer 
+                    their time to providing free and qualitative healthcare in poor communities. 
+                    We are about service, service to the people and service to the community. 
+                </p> 
+                <p>
+                    We desire a world in which medical professionals and other healthcare providers 
+                    would make service to their people, their communities and neighboring 
+                    communities an integral part of their monthly schedule.
+                </p>
+                <p>
+                    We believe that by coming together, 
+                    we can build for the world a big global community of 
+                    medical care where we are all responsible to the wellbeing 
+                    and care of each other and a world where no one goes bankrupt 
+                    as a result of falling ill or dies from lack of care due to poverty.
+                </p>
             </div>
         </div>
     </section>
     
-    <section class="mission">
+    <section class="about Mission">
         <div class="container">
-            <h2>Our Mission</h2>
-            <p>Every Person Deserves Access To Life Improving And Lifesaving Information, Medical Care, And Economic Opportunities To Support Their Families. We Are Dedicated To Providing Medical Care And Resources To The Economically Disadvantaged. Our Mission Is To Deploy Effective And Coordinated Efforts To Ensure People Gain Access To Qualitative Medical Care, And Economic Resources.</p>
+            <img id="icon-image" style="border-radius: 50%; width: 60px; height: 60px;" src="img/mission.png" alt="icon" class="icons">
+            <h2 id="title">Our Mission</h2>
             <div class="mission-indicators">
                 <span class="indicator active"></span>
                 <span class="indicator"></span>
                 <span class="indicator"></span>
                 <span class="indicator"></span>
             </div>
-            <div class="mission-controls" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
-                <button class="prev-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&lt;</button>
-                <button class="next-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&gt;</button>
-            </div>
+            <div class="about-content">
+                <p id="content">
+                    Every Person Deserves Access To Life Improving And Lifesaving Information, 
+                    Medical Care, And Economic Opportunities To Support Their Families. 
+                    We Are Dedicated To Providing Medical Care And Resources To The Economically Disadvantaged. 
+                    Our Mission Is To Deploy Effective And Coordinated Efforts To 
+                    Ensure People Gain Access To Qualitative Medical Care, And Economic Resources.
+                </p>
+                <div class="mission-controls" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                    <button class="prev-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&lt;</button>
+                    <button class="next-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&gt;</button>
+                </div>
+            </div>  
         </div>
     </section>
     
@@ -118,11 +160,11 @@
                     <img src="img/logo.png" alt="Doctors Charity Logo">
                 </div>
                 
-                <nav class="footer-nav">
+                <div class="footer-div">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="services.html">Our Services</a>
-                </nav>
+                </div>
             </div>
             
             <hr>
@@ -154,68 +196,6 @@
     </footer>
 
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
-            }
-        });
-        
-        // Resize handler
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
-            }
-        });
-        
-        // Mission slider functionality
-        const indicators = document.querySelectorAll('.mission-indicators .indicator');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let currentSlide = 0;
-        
-        // Function to update the active indicator
-        function updateIndicators(index) {
-            indicators.forEach((indicator, i) => {
-                if (i === index) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-        
-        // Event listeners for indicators
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                updateIndicators(currentSlide);
-            });
-        });
-        
-        // Previous button click
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + indicators.length) % indicators.length;
-            updateIndicators(currentSlide);
-        });
-        
-        // Next button click
-        nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % indicators.length;
-            updateIndicators(currentSlide);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
