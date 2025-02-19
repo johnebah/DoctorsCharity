@@ -12,97 +12,99 @@ body {
     line-height: 1.5;
     color: black;
 }
-body nav {
-    margin: auto;
-}
-
-nav {
-    /* margin-top: 0; */
+/* Header styles */
+header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    /* background: transparent; */
-    background-color: #fff;
-    border-bottom: 1px solid #dee2e6;
+    padding: 20px 0;
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-.nav-wrapper {
+.nav-container {
     display: flex;
-    height: 60px;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
+    padding: 0 20px;
+    position: relative; /* Add this */
 }
 
-nav .logo img {
-    height: 40px;
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    position: absolute; /* Add this */
+    right: 20px;       /* Add this */
+    top: 50%;          /* Add this */
+    transform: translateY(-50%); /* Add this */
+    z-index: 102;      /* Add this */
 }
 
-nav .desktop-menu {
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+nav ul {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    list-style: none;
 }
 
-nav .links {
-    display: flex;
-    gap: 20px;
+nav ul li {
+    margin-left: 20px;
 }
 
-nav .links a {
-    color: #212529;
+nav ul li a {
     text-decoration: none;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-nav .buttons {
+nav ul li a:hover {
+    color: #3a4cb3;
+}
+
+.cta-buttons {
     display: flex;
     gap: 10px;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 10px;
-    background: none;
-    border: none;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #212529;
-    transition: 0.3s;
-}
-
-.mobile-menu {
-    display: none;
-}
-
 .btn {
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: 500;
-    width: fit-content;
+    transition: all 0.3s;
 }
 
 .btn-outline {
-    border: 1px solid #6c757d;
-    background: transparent;
-    color: #6c757d;
+    border: 1px solid #3a4cb3;
+    color: #3a4cb3;
 }
 
 .btn-primary {
-    background-color: #000080;
-    color: white;
+    background-color: #3a4cb3;
+    color: #fff;
+    border: 1px solid #3a4cb3;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 /* Main Content Styling */
@@ -157,23 +159,50 @@ nav .buttons {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu {
-        display: none;
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        /* background: white; */
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: white;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 15px;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        z-index: 100;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     }
-
-    .menu.active {
-        display: flex;
+    
+    .nav-menu.active {
+        right: 0;
     }
-
-    .hamburger {
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .mobile-menu-btn {
         display: block;
+        z-index: 101;
+    }
+    
+    .cta-buttons {
+        display: none;
+    }
+
+    /* Hamburger menu animation */
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 
     .services {
@@ -192,104 +221,6 @@ nav .buttons {
     }
 }
 
-
-
-
-
-
-
-
-
-
-/* Footer styles */
-hr {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.footer-content {
-    padding: 60px 0;
-    padding-left: 60px;
-    padding-right: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.first-footer {
-    padding-left: 60px;
-    padding-right: 60px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer-logo {
-    flex: 1;
-    height: 50px;
-}
-
-.footer-logo img {
-    height: 100%;
-}
-
-.footer-div {
-    display: flex;
-    justify-content: center; /* Center align the nav items */
-    gap: 20px; /* Add spacing between links */
-    flex-wrap: wrap; /* Ensure wrapping in smaller screens */
-}
-
-.footer-div a {
-    color: #333; /* Make sure links have a visible color */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.footer-div a:hover {
-    color: #000080; /* Change color on hover */
-}
-
-.second-footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.social-links {
-    flex: 1;
-}
-
-
-.social-links {
-    display: flex;
-    gap: 20px;
-}
-
-.social-links a {
-    color: #666;
-    transition: color 0.3s;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #f5f5f5;
-}
-
-.social-links a:hover {
-    background: #e8e8e8;
-    transform: translateY(-2px);
-}
-
-.copyright {
-    text-align: right;
-    color: #666;
-}
 
 /* Responsiveness to mobile */
 @media (max-width: 768px) {
@@ -346,42 +277,4 @@ hr {
     .contact-section {
         grid-template-columns: 1fr;
     }
-
-    /* Footer */
-    .first-footer {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .footer-logo {
-        margin-bottom: 20px;
-    }
-
-    .footer-div {
-        /* display: flex; */
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .footer-div a {
-        padding: 10px 15px; /* Adjust the padding as needed */
-    }
-
-    .second-footer {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .social-links {
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .copyright {
-        text-align: center;
-    }
-
 }
