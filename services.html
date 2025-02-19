@@ -11,45 +11,33 @@
     <link href="img/favicon.ico" rel="icon">
     <title>Contact Us - Doctors Charity</title>
     <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menue.css">
     
 </head>
 <body>
     <!-- Nav Section -->
-    <nav>
-        <div class="nav-wrapper">
+    <header>
+        <div class="container nav-container">
             <div class="logo">
-                <img src="img/logo.png" alt="Doctors Charity Logo">
+                <img src="img/logo2.png" alt="Doctors Charity Logo">
             </div>
-            <div class="desktop-menu">
-                <div class="links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Our Services</a>
-                </div>
-                <div class="buttons">
-                    <a href="contact.html"><button class="btn btn-primary">Contact Us</button></a>
-                </div>
-            </div>
-            <button class="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <div class="mobile-menu">
-            <div class="links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Our Services</a>
-            </div>
-            <div class="buttons">
-                <a href="contact.html"><button class="btn btn-primary">Contact Us</button></a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </div>
         </div>
-    </nav>
+    </header>
 
      <!-- Hero Section -->
-    <header class="hero">
+    <section class="hero">
         <!-- <img class="hero-background" src="img/main-service.png" alt="Service-Care-Givers"> -->
         <div class="overlay">
             <h1>Our Services</h1>
@@ -64,7 +52,7 @@
                 receiving the medical attention they deserve.
             </p>
         </div>
-    </header>
+    </section>
 
     <!-- Services Section -->
     <section class="services">
@@ -151,10 +139,6 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
