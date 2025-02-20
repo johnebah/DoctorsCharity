@@ -42,36 +42,19 @@ hr {
 }
 
 .footer-logo {
+    /* background-color: aqua; */
     flex-shrink: 0; /* Prevents shrinking */
-    width: 149px;
-    height: 134px;
+    width: 249px;
+    height: 234px;
     display: block; /* Ensures visibility */
 }
 
 .footer-logo img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    height: 100%;
     display: block; /* Removes inline spacing */
 }
-/* .first-footer {
-    align-items: center; 
-    padding-right: 60px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer-logo {
-    margin-top: auto;
-    padding-left: 0;
-    flex: 1;
-    width: 149px;
-    height: 134px;
-}
-
-.footer-logo img {
-    height: 100%;
-} */
 
 .footer-div {
     display: flex;
