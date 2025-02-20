@@ -135,6 +135,20 @@ document.addEventListener('DOMContentLoaded', () => {
             image: "img/visions.png"
         },
         {
+            title: "Legacy",
+            content: "We invite doctors, both medical and academic, and other professionals to serve outside of the office. We make it easy for you to donate your time or equipment, and provide free and qualitative healthcare and support where it’s needed the most.",
+            image: "img/legacy.png"
+        },
+        {
+            title: "Our Strategy",
+            content: `
+                <ul>
+                    <li>Making it easy for doctors and other professionals to give back to important causes by providing a platform for making an even bigger difference.</li>
+                    <li>Supporting healthcare delivery systems to fix disparities through a community-driven approach.</li>
+                </ul>`,
+            image: "img/strategy.png"
+        },
+        {
             title: "Volunteer",
             content: "Volunteer and be a part of an organization boldly increasing access to healthcare and economic resources in vulnerable communities. Your help is needed to deliver care, education, and training in the U.S. and Africa.",
             image: "img/volunteers.png"
