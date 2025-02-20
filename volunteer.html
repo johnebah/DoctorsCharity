@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- https://favicon.io/emoji-favicons/money-bag/ -->
+    <link href="img/favicon.ico" rel="icon">
+    <title>Contact Us - Doctors Charity</title>
+    <!-- Shared CSS with Contacts page -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menue.css">
+
+    
+    
+</head>
+<body>
+    <!-- Nav Section -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="img/logo2.png" alt="Doctors Charity Logo">
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li class="no-desktop">
+                        <a href="contact.html" class="btn btn-primary">
+                            Contact Us <span class="arrow">→</span>
+                        </a>
+                    </li>                                        
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact Us <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="contact-section" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <img src="img/not-hero2.png" alt="Woman on phone" class="contact-image" style="height: 100%;">
+            
+            <div class="contact-form">
+                
+                <div style="text-align: center;">
+                    <h1>Become A Volunteer Today!</h1>
+                    <p style="text-indent: 20px; font-size: small;">Fill The Form And Become A Part of Our Volunteer Teams</p>
+                </div>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="JohnDoe@Gmail.Com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" placeholder="+1 212-555-7890">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <select name="location" id="location"></select>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="first-footer">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Doctors Charity Logo">
+                </div>
+                
+                <div class="footer-div">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="second-footer">
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    © Copyright 2025 Doctors Charity
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+    <script>
+        const states = [
+            { code: "PH", name: "Select Location", disabled: true, selected: true }, // Placeholder
+            { code: "AL", name: "Alabama" },
+            { code: "AK", name: "Alaska" },
+            { code: "AZ", name: "Arizona" },
+            { code: "AR", name: "Arkansas" },
+            { code: "CA", name: "California" },
+            { code: "CO", name: "Colorado" },
+            { code: "CT", name: "Connecticut" },
+            { code: "DE", name: "Delaware" },
+            { code: "FL", name: "Florida" },
+            { code: "GA", name: "Georgia" },
+            { code: "HI", name: "Hawaii" },
+            { code: "ID", name: "Idaho" },
+            { code: "IL", name: "Illinois" },
+            { code: "IN", name: "Indiana" },
+            { code: "IA", name: "Iowa" },
+            { code: "KS", name: "Kansas" },
+            { code: "KY", name: "Kentucky" },
+            { code: "LA", name: "Louisiana" },
+            { code: "ME", name: "Maine" },
+            { code: "MD", name: "Maryland" },
+            { code: "MA", name: "Massachusetts" },
+            { code: "MI", name: "Michigan" },
+            { code: "MN", name: "Minnesota" },
+            { code: "MS", name: "Mississippi" },
+            { code: "MO", name: "Missouri" },
+            { code: "MT", name: "Montana" },
+            { code: "NE", name: "Nebraska" },
+            { code: "NV", name: "Nevada" },
+            { code: "NH", name: "New Hampshire" },
+            { code: "NJ", name: "New Jersey" },
+            { code: "NM", name: "New Mexico" },
+            { code: "NY", name: "New York" },
+            { code: "NC", name: "North Carolina" },
+            { code: "ND", name: "North Dakota" },
+            { code: "OH", name: "Ohio" },
+            { code: "OK", name: "Oklahoma" },
+            { code: "OR", name: "Oregon" },
+            { code: "PA", name: "Pennsylvania" },
+            { code: "RI", name: "Rhode Island" },
+            { code: "SC", name: "South Carolina" },
+            { code: "SD", name: "South Dakota" },
+            { code: "TN", name: "Tennessee" },
+            { code: "TX", name: "Texas" },
+            { code: "UT", name: "Utah" },
+            { code: "VT", name: "Vermont" },
+            { code: "VA", name: "Virginia" },
+            { code: "WA", name: "Washington" },
+            { code: "WV", name: "West Virginia" },
+            { code: "WI", name: "Wisconsin" },
+            { code: "WY", name: "Wyoming" }
+        ];
+    
+        const select = document.getElementById("location");
+        states.forEach(state => {
+            const option = document.createElement("option");
+            option.value = state.code;
+            option.textContent = state.name;
+            if (state.disabled) option.disabled = true;
+            if (state.selected) option.selected = true;
+            select.appendChild(option);
+        });
+    </script>
+</body>
+</html>
