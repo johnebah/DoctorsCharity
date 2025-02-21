@@ -305,6 +305,10 @@
     #align-outreach{
         float: left;
     }
+    #header-contact-btn{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
     .initiative-content {
         text-align: left;
     }
