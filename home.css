@@ -302,6 +302,9 @@
         font-size: smaller;
         float: right; /* Moves the link to the right */
     }
+    #align-outreach{
+        float: left;
+    }
     .initiative-content {
         text-align: left;
     }
