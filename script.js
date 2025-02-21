@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Legacy",
             content: "We invite doctors, both medical and academic, and other professionals to serve outside of the office. We make it easy for you to donate your time or equipment, and provide free and qualitative healthcare and support where it’s needed the most.",
-            image: "img/legacy.png"
+            image: "img/legacy.jpg"
         },
         {
             title: "Our Strategy",
