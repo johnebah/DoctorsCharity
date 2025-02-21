@@ -208,6 +208,10 @@
     
     /* ========== Mobile Responsive Fixes ========== */
     @media (max-width: 768px) {
+       
+       .hero .overlay {
+            justify-content: flex-end; /* Pushes content to botom */ 
+        }
         .volunteer-section {
             height: auto;
             max-height: none; /* Allows it to grow dynamically */
