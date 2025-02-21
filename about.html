@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="menue.css">
     <link href="img/favicon.ico" rel="icon">
 </head>
@@ -162,49 +162,79 @@
     </section>
     
     <footer>
-        <div class="footer-content">
-            
-            <div class="first-footer">
-                <div class="footer-logo">
-                    <img src="img/logo.png" alt="Doctors Charity Logo">
+        <div class="footer-section">
+
+            <div class="top-section">
+                <div class="footer-row1">
+                    <p>
+                        <span>Join Our Newsletter</span>
+                        <span>To Keep Up To Date With Us</span>
+                    </p>
+                    <div class="email-signup">
+                        <input type="email" class="email-input" placeholder="Enter Your Email">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
                 </div>
-                
-                <div class="footer-div">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Our Services</a>
-                    <a href="contact.html">Contact Us</a>
+                <div class="footer-row2">
+                    <img src="img/footer-logo.png" alt="Logo" class="footer-logo">
+                    <nav class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Our Services</a>
+                    </nav>
                 </div>
             </div>
-            
             <hr>
-            
-            <div class="second-footer">
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+            <div class="boottom-section">
+                <div class="footer-b-row1">
+
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>info@doctorscharity.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>212 812 7554</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-fax"></i>
+                            <span>212 812 7558</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="single-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>207 W 110th Street Suite 19, New York, NY 10026</span>
+                    </div>
                 </div>
-                
-                <div class="copyright">
-                    © Copyright 2025 Doctors Charity
+                <div class="footer-b-row2">
+                    <div class="copyright">
+                        <i class="fa-regular fa-copyright"></i>
+                        <span>Copyright 2025 Your Organization Name</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
