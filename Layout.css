@@ -198,180 +198,337 @@ nav ul li a:hover {
 
 
 /* General Footer */
-        .footer-section {
-            /* width: 100%; */
-            background: linear-gradient(to bottom, #FDF6E6, #F4FEFC);
-            padding-left: 50px;
-            padding-right: 50px;
-        }
+.footer-section {
+    background: linear-gradient(to bottom, #FDF6E6, #F4FEFC);
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #666;
+}
 
-        /* footer top row no.1 */
-        .footer-row1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
+/* footer top row no.1 */
+.footer-row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
-        .email-signup {
-            margin-left: auto;
-            display: flex;
-            max-width: 500px;
-            gap: 10px;
-        }
+.email-signup {
+    margin-left: auto;
+    display: flex;
+    max-width: 500px;
+    gap: 10px;
+}
 
-        .email-input {
-            flex: 1;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
+.email-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
 
-        .subscribe-btn {
-            padding: 0.5rem 1.5rem;
-            background-color: #02087D;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.subscribe-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #02087D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        /* footer top row no.2 */
-        .footer-row2 {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
+/* footer top row no.2 */
+.footer-row2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
 
-        .footer-logo {
-            height: 100px;
-            transition: transform 0.6s ease-in-out;
-        }
+.footer-logo {
+    height: 100px;
+    transition: transform 0.6s ease-in-out;
+}
 
-        .footer-logo:hover {
-            transform: scale(1.5);
-        }
+.footer-logo:hover {
+    transform: scale(1.5);
+}
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            padding-right: 50px;
-            margin-left: auto;
-        }
+.nav-links {
+    display: flex;
+    gap: 20px;
+    padding-right: 50px;
+    margin-left: auto;
+}
 
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            /* font-size: 16px; */
-            transition: color 0.3s;
-        }
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        .nav-links a:hover {
-            color: #000;
-            transform: scale(1.1);
-        }
+.nav-links a:hover {
+    color: #000;
+    transform: scale(1.1);
+}
 
-        .nav-links a:hover::after {
-            width: 100%;
-            left: 0;
-        }
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
 
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: #000;
-            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-        }
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
 
-        /* Footer bottom row no.1 */
-        .footer-b-row1 {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
+/* Footer bottom row no.1 */
+.footer-b-row1 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
 
-        .contact-left {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            gap: 40px;
-            flex: 1;
-        }
+.contact-left {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 40px;
+    flex: 1;
+}
 
-        /* .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        } */
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px; /* Space between icon and text */
-        }
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
 
-        .contact-item i {
-            font-size: 18px; /* Adjust icon size */
-            color: #333; /* Default color */
-            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
-        }
+.contact-item i {
+    font-size: 18px; /* Adjust icon size */
+    color: #333; /* Default color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
 
-        .contact-item:hover i {
-            transform: scale(1.2); /* Slight pop effect */
-            color: black; /* Change icon color on hover */
-        }
+.contact-item:hover i {
+    transform: scale(1.2); /* Slight pop effect */
+    color: black; /* Change icon color on hover */
+}
 
-        .footer-b-row1>.contact-item {
-            margin-left: auto;
-            max-width: 40%;
-        }
+.footer-b-row1>.contact-item {
+    margin-left: auto;
+    max-width: 40%;
+}
 
-        /* Footer bottom row no.2 */
-        .footer-b-row2 {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            padding-bottom: 20px;
-        }
+/* Footer bottom row no.2 */
+.footer-b-row2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
 
-        .copyright {
-            flex: 1;
-        }
+.copyright {
+    flex: 1;
+}
 
-        .social-links {
-            padding-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
+.social-links {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #666; 
+    width: 40px; /* Set fixed size for circular effect */
+    height: 40px;
+    border-radius: 10%; /* Makes icons circular */
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
 
-        /* .social-links a {
-            text-decoration: none;
-            font-size: 18px;
-            margin-right: 5px;
-            color: #333;
-            transition: color 0.3s;
-        } */
+.social-links a:hover {
+    transform: scale(1.2); /* Slight pop effect */
+}
 
-        /* .social-links a:hover {
-            background: #e8e8e8;
-            transform: translateY(-2px);
-        } */
-        .social-links a {
-            display: inline-flex; /* Ensures proper alignment */
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 18px; /* Adjust icon size */
-            color: #333; /* Adjust icon color */
-            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
-        }
+/* Assign unique hover colors */
+.social-links a[aria-label="Facebook"]:hover {
+    color: white; /* Facebook Blue */
+    background: #1877F2; /* Facebook Blue */
+}
 
-        .social-links a:hover {
-            transform: scale(1.2); /* Increases size slightly */
-            color: #007bff; /* Changes color on hover (adjust as needed) */
-        }
+.social-links a[aria-label="Instagram"]:hover {
+    color: white; /* Instagram Pink */
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
 
-        /* End Footer */
+.social-links a[aria-label="LinkedIn"]:hover {
+    color: white; /* LinkedIn Blue */
+    background: rgb(53, 53, 228);
+}
+
+.social-links a[aria-label="Twitter"]:hover {
+    color: white; /* Twitter Blue */
+    background: black;
+}
+
+.social-links a[aria-label="YouTube"]:hover {
+    color: #FF0000; /* YouTube Red */
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* Top section with newsletter & logo + navigation */
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.footer-row1 p {
+    order: 1;
+}
+.footer-row1 {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.email-signup {
+    display: flex;
+    flex-direction: column; /* Stack input & button vertically */
+    align-items: center; /* Centers items inside */
+    justify-content: center;
+    width: fit-content; /* Prevents full width */
+    margin: 0 auto; /* Centers the entire div */
+    text-align: center;
+}
+
+.email-input {
+    width: 100%;
+}
+.subscribe-btn {
+    width: 60%; 
+    max-width: 300px;
+}
+/* Logo & Navigation */
+.footer-row2 {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 300px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom Section */
+.boottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Contact Information */
+.footer-b-row1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#single-item {
+    order: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: fit-content; /* Ensures it only takes the necessary width */
+    margin: 0 auto; /* Centers it horizontally */
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Copyright & Social Links */
+.footer-b-row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+/* Social Links stacked */
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Horizontal line */
+hr {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}   
+}
+/* End Footer */
