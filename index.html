@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,274 +8,293 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/69179aab9e.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="about.css"> -->
+    <link rel="stylesheet" href="menue.css">
+    <link rel="stylesheet" href="layout.css">
+
+
+    <!-- <link rel="stylesheet" href="services.css"> -->
+    <link rel="stylesheet" href="home.css">
+    <link href="img/favicon.ico" rel="icon">
+
 </head>
+
 <body>
+
     <header>
-        <nav>
+        <div class="container nav-container">
             <div class="logo">
-                <img src="img/logo.png" alt="Logo" style="width:100px;height:70px;">
+                <img src="img/logo2.png" alt="Doctors Charity Logo">
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="about.html">About</a>
-                <a href="#projects">Our Projects</a>
-                <a href="#shop">Shop</a>
-                <a href="#contact">Contact Us</a>
-                <button class="btn-volunteer">Volunteer</button>
-                <button class="btn-donate">Contact Us</button>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+
+                    <li class="no-desktop">
+                        <a href="#" class="donate-btn">Donate</a>
+                        <a href="contact.html" class="contact-btn">
+                            Contact Us <span class="arrow">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="#" class="donate-btn">Donate</a>
+                <a href="contact.html" class="contact-btn">Contact Us <span class="arrow">→</span></a>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero slider">
-            <div class="slide active">
-                <div class="slide-content">
-                    <h1>DOCTORS CHARITY</h1>
-                    <p>Supporting Communities, Transforming Lives Beginning The Healthcare Gap By Providing Medical Healthcare Workers With Essential Commodities In Need Communities.</p>
-                    <div class="hero-buttons">
-                        <button class="btn-volunteer">Volunteer</button>
-                        <button class="btn-donate">Contact Us</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Additional hero slides here -->
-        </section>
 
-        <section class="mission-section">
-            <div class="mission-slider">
-                <div class="mission-slide active">
-                    <h2>Our Mission</h2>
-                    <p>Every Person Deserves Access To Life Improving And Lifesaving Information, Medical Care, And Economic Opportunities To Support Their Families. We Are Dedicated To Providing Medical Care And Resources To The Economically Disadvantaged.</p>
+
+    <div class="contains">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="overlay">
+                <h1>DOCTORS CHARITY</h1>
+                <p class="hero-text">
+                    At Doctors Charity we provide compassionate and professional 
+                    home care services for individuals with limited mobility or 
+                    those unable to access healthcare facilities. Our dedicated 
+                    team of medical professionals and caregivers deliver personalized, 
+                    high quality care in the comfort of patient”s homes, ensuring they 
+                    receive medical attention,support and assistance they 
+                    need to maintain their health and wellbeing
+                </p>
+                <div style="margin-top: 50px;">
+                    <p>
+                        <a href="#" class="donate-btn h-donate">Donate</a>
+                        <a href="contact.html" class="contact-btn h-contact">Contact Us</a>
+                    </p>
                 </div>
-                <div class="mission-slide">
-                    <h2>Our Legacy</h2>
-                    <p>Founded by dedicated healthcare professionals, our journey began with a simple vision to bridge the healthcare gap in underserved communities.</p>
-                </div>
-                <div class="mission-slide">
-                    <h2>Our Vision</h2>
-                    <p>To create a world where quality healthcare is accessible to all, regardless of their economic status or geographical location.</p>
-                </div>
-                <div class="mission-slide">
-                    <h2>Our Strategy</h2>
-                    <p>To create a world where quality healthcare is accessible to all, regardless of their economic status or geographical location.</p>
-                </div>
-            </div>
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+
             </div>
         </section>
 
-
-        <section class="initiatives">
-            <h2 style="text-align:center;">Our Services</h2>
-            <p style="text-align:center;">Your donation makes a lasting impact by supporting vital medical care, equipment distribution, and community empowerment. Help us change lives—donate today!</p>
-            <div class="initiative-cards">
-                <div class="card">
-                    <h3>Home Care</h3>
-                    <img src="img/join1.png" alt="Medical Missions">
-                    
-                    <!-- <div class="donation-info">
-                        <p class="amount">Donation: $600,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 75%"></div>
-                        </div>
-                        <p class="progress-text">$450,000 raised of $600,000 goal</p>
-                    </div>
-                    <p>Help Bring Relief Free Medical Services And Vital Treatments To Communities In Need</p> -->
-                    <!-- <button class="btn-donate">Donate</button> -->
+        <section class="about Mission">
+            <div class="mission-container">
+                <img id="icon-image" style="border-radius: 50%; width: 60px; height: 60px;" src="img/mission.png"
+                    alt="icon" class="icons">
+                <h2 id="title">Our Mission</h2>
+                <div class="mission-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
                 </div>
-                <div class="card">
-                    <h3>Equipment Distribution</h3>
-                    <img src="img/join2.png" alt="Equipment Distribution">
-                    <!-- <div class="donation-info">
-                        <p class="amount">Donation: $400,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 60%"></div>
-                        </div>
-                        <p class="progress-text">$240,000 raised of $400,000 goal</p>
+                <div class="about-content">
+                    <p id="content">
+                        Every Person Deserves Access To Life Improving And Lifesaving Information,
+                        Medical Care, And Economic Opportunities To Support Their Families.
+                        We Are Dedicated To Providing Medical Care And Resources To The Economically Disadvantaged.
+                        Our Mission Is To Deploy Effective And Coordinated Efforts To
+                        Ensure People Gain Access To Qualitative Medical Care, And Economic Resources.
+                    </p>
+                    <div class="mission-controls"
+                        style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                        <button class="prev-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&lt;</button>
+                        <button class="next-btn" style="padding: 5px; font-size: 12px; cursor: pointer;">&gt;</button>
                     </div>
-                    <p>Support Our Medical Equipment Distribution Program</p> -->
-                    <!-- <button class="btn-donate">Donate</button> -->
-                </div>
-                <div class="card">
-                    <h3>Medical Outreaches Abroad</h3>
-                    <img src="img/join3.png" alt="Farming Initiatives">
-                    <!-- <div class="donation-info">
-                        <p class="amount">Donation: $300,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 45%"></div>
-                        </div>
-                        <p class="progress-text">$135,000 raised of $300,000 goal</p>
-                    </div>
-                    <p>Support Sustainable Farming Projects</p> -->
-                    <!-- <button class="btn-donate">Donate</button> -->
-                </div>
-                <div class="card">
-                    <h3>Microfinancing Initiatives</h3>
-                    <img src="img/join4.png" alt="Microfinancing">
-                    
-                   <!--  <div class="donation-info">
-                        <p class="amount">Donation: $200,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 30%"></div>
-                        </div>
-                        <p class="progress-text">$60,000 raised of $200,000 goal</p>
-                    </div> -->
-                    <!-- <p>Support Our Microfinancing Programs</p> -->
-                    <!-- <button class="btn-donate">Donate</button> -->
                 </div>
             </div>
         </section>
 
+        <section class="service-section">
+            <div class="service-text">
+                <h1>Our Services</h1>
+                <p>
+                    Doctors Charity is committed to breaking barriers in healthcare
+                    access and ensuring no one is left behind.
+                    Check out some of our services below
+                </p>
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <p>Home Care</p>
+                    <img src="img/homecare.jpg" alt="Home Care Service">
+                </div>
+                <div class="service-card">
+                    <p>Equipment Distribution</p>
+                    <img src="img/service2.png" alt="Equipment Distribution">
+                </div>
+                <div class="service-card">
+                    <p>Pro Bono Services <a href="services.html" class="see-more">See More</a></p>
+                    <img src="img/proBono.png" alt="Pro Bono Services">
+                </div>
+            </div>
+        </section>
 
-         <section class="volunteer-banner">
-            <div class="content">
+        <!-- Volunteer Section -->
+        <div class="volunteer-section" style="background-color: #02087D;">
+            <img src="img/volunteer-team.png" alt="Healthcare Volunteers" class="volunteer-image">
+            <div class="volunteer-overlay">
                 <h2>Become A Volunteer</h2>
-                <p>Join Our Community Of Healthcare Workers Making A Difference In Communities. We Are Always Looking For Dedicated Volunteers To Help Us Make A Positive Impact.</p>
-                <button class="btn-volunteer">Become A Volunteer</button>
+                <p>
+                    Join Our Passionate Community And Make A Lasting Impact.
+                    Whether You Have A Few Hours Or Over 12 Years,
+                    Your Time Can Make A Difference. Sign Up Now
+                    To Volunteer And Help Those In Need.
+                </p>
+                <!-- <button style="background-color: #02087D;" class="volunteer-btn">Volunteer</button> -->
+                <a href="#" style="background-color: #02087D;" class="volunteer-btn">Volunteer</a>
             </div>
-        </section>
-        <section class="initiatives">
-            <h2 style="text-align:center;">Join Us In Making A Difference</h2>
-            <div class="initiative-cards">
-                <div class="card">
-                    <img src="img/join1.png" alt="Medical Missions">
-                    <h3>Medical Missions Abroad</h3>
-                    <div class="donation-info">
-                        <p class="amount">Donation: $600,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 75%"></div>
-                        </div>
-                        <p class="progress-text">$450,000 raised of $600,000 goal</p>
-                    </div>
-                    <p>Help Bring Relief Free Medical Services And Vital Treatments To Communities In Need</p>
-                    <!-- <button class="btn-donate">Donate</button> -->
-                </div>
-                <div class="card">
-                    <img src="img/join2.png" alt="Equipment Distribution">
-                    <h3>Equipment Distribution</h3>
-                    <div class="donation-info">
-                        <p class="amount">Donation: $400,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 60%"></div>
-                        </div>
-                        <p class="progress-text">$240,000 raised of $400,000 goal</p>
-                    </div>
-                    <p>Support Our Medical Equipment Distribution Program</p>
-                    <!-- <button class="btn-donate">Donate</button> -->
-                </div>
-                <div class="card">
-                    <img src="img/join3.png" alt="Farming Initiatives">
-                    <h3>Farming Initiatives</h3>
-                    <div class="donation-info">
-                        <p class="amount">Donation: $300,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 45%"></div>
-                        </div>
-                        <p class="progress-text">$135,000 raised of $300,000 goal</p>
-                    </div>
-                    <p>Support Sustainable Farming Projects</p>
-                    <!-- <button class="btn-donate">Donate</button> -->
-                </div>
-                <div class="card">
-                    <img src="img/join4.png" alt="Microfinancing">
-                    <h3>Microfinancing Initiatives</h3>
-                    <div class="donation-info">
-                        <p class="amount">Donation: $200,000</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="width: 30%"></div>
-                        </div>
-                        <p class="progress-text">$60,000 raised of $200,000 goal</p>
-                    </div>
-                    <p>Support Our Microfinancing Programs</p>
-                    <!-- <button class="btn-donate">Donate</button> -->
-                </div>
-            </div>
-        </section>
+        </div>
 
-        <section class="gallery">
-            <h2 style="text-align:center">Our Photo Gallery</h2>
-            <div class="gallery-slider">
-                <div class="gallery-track">
-                    <div class="gallery-slide">
-                        <img src="img/gallery1.png" alt="Gallery Image 1">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="img/gallery2.png" alt="Gallery Image 2">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="img/gallery3.png" alt="Gallery Image 3">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="img/gallery4.png" alt="Gallery Image 4">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="img/gallery5.png" alt="Gallery Image 5">
+
+        <!-- Outreaches -->
+        <div class="outreach-section">
+
+            <div class="outreach-header">
+                <h2>Outreaches And Global Initiatives</h2>
+                <p>
+                    Doctors Charity Is Committed To Ensuring That Everyone
+                    Regardless Of Their Financial Ability Has Access To Quality Healthcare.
+                    Join Us And Make A Lasting Impact By Supporting Vital Medical Care,
+                    Equipment Distribution, And Community Empowerment — <a href="#">Donate Today!</a>
+                </p>
+            </div>
+
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <p>Medical Outreaches Abroad</p>
+                    <img src="img/service3.png" alt="Medical Outreaches Abroad">
+                    <div class="initiative-content">
+                        <p>Help Bring Skilled Free Medical Services And Vital Treatments To Communities In Need</p>
                     </div>
                 </div>
-                <button class="gallery-prev">❮</button>
-                <button class="gallery-next">❯</button>
-            </div>
-        </section>
 
-        <section class="telemedicine">
-            <div class="content">
+                <div class="initiative-card">
+                    <p>Microfinance Initiatives</p>
+                    <img src="img/finance_initiatives.png" alt="Microfinance Initiatives">
+                    <div class="initiative-content">
+                        <p>Help Bring Skilled Free Medical Services And Vital Treatments To Communities In Need</p>
+                    </div>
+                </div>
+
+                <div class="initiative-card">
+                    <p>Farming Initiatives</p>
+                    <img src="img/farming.png" alt="Farming Initiatives">
+                    <div class="initiative-content">
+                        <p>Help Bring Skilled Free Medical Services And Vital Treatments To Communities In Need</p>
+                    </div>
+                </div>
+
+                <div class="initiative-card">
+                    <p>Wellness Programs <a href="outreaches.html" class="see-more-link">See More</a></p>
+                    <img src="img/wellness-program.png" alt="Farming Initiatives">
+                    <div class="initiative-content">
+                        <p>Help Bring Skilled Free Medical Services And Vital Treatments To Communities In Need</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- TeleMedicine Div -->
+        <div class="telemedicine-section">
+            <img src="img/join4.png" alt="Telemedicine Background" class="telemedicine-bg">
+            <div class="telemedicine-content">
                 <h2>Join Us Via Telemedicine</h2>
-                <p>Doctors Can Now Provide Care Via Our Online Platform. When You Work As Volunteer Doctor Through Our Platform, You Can Provide Care To Patients Who Are Unable To Travel To See A Doctor.</p>
-                <button class="btn-contact">Contact Us</button>
+                <p>
+                    Doctors Charity uses information technology to connect qualified healthcare workers, 
+                    who wish to volunteer their time and skills to alleviate the health 
+                    issues that plague the continent of Africa, with the people 
+                    who need such services. For these volunteers who are 
+                    unable to leave their jobs to travel for onsite medical 
+                    intervention, Telemedicine offers the perfect avenue for them to do so. 
+                    Working with their free time and schedule, Doctors Charity can schedule 
+                    consultation appointments with them and patients in Africa, thereby efficiently meeting the same goals.
+                    Ihotu Telemedicine Clinic in Nigeria is a major partner in this regard.
+                </p>
+                <a href="#" class="volunteer-btn tele-btn"
+                    style="background-color: #02087D;">Contact Us</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <footer>
-        <div class="footer-content">
-            
-            <div class="first-footer">
-                <div class="footer-logo">
-                    <img src="img/logo.png" alt="Doctors Charity Logo">
+        <div class="footer-section">
+
+            <div class="top-section">
+                <div class="footer-row1">
+                    <p>
+                        <span>Join Our Newsletter</span>
+                        <span>To Keep Up To Date With Us</span>
+                    </p>
+                    <div class="email-signup">
+                        <input type="email" class="email-input" placeholder="Enter Your Email">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
                 </div>
-                
-                <div class="footer-div">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Our Services</a>
+                <div class="footer-row2">
+                    <img src="img/footer-logo.png" alt="Logo" class="footer-logo">
+                    <nav class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Our Services</a>
+                    </nav>
                 </div>
             </div>
-            
             <hr>
-            
-            <div class="second-footer">
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+            <div class="boottom-section">
+                <div class="footer-b-row1">
+
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>info@doctorscharity.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>212 812 7554</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-fax"></i>
+                            <span>212 812 7558</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="single-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>207 W 110th Street Suite 19, New York, NY 10026</span>
+                    </div>
                 </div>
-                
-                <div class="copyright">
-                    © Copyright 2025 Doctors Charity
+                <div class="footer-b-row2">
+                    <div class="copyright">
+                        <i class="fa-regular fa-copyright"></i>
+                        <span>Copyright 2025 Your Organization Name</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,4 +302,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
