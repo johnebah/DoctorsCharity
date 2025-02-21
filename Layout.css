@@ -1,205 +1,9 @@
-/* Layout Contains styles for Header and Footer (Shared styles) */
-
-/* Header styles */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    /* background-color: rgba(255, 255, 255, 0.95); */
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
-
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative; 
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    position: absolute; 
-    right: 20px;       
-    top: 50%;          
-    transform: translateY(-50%); 
-    z-index: 102;      
-}
-
-.logo {
-    height: 50px;
-}
-
-.logo img {
-    height: 100%;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #02087D;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.btn {
-    padding: 8px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.btn-outline {
-    border: 1px solid #02087D;
-    color: #02087D;
-}
-
-.btn-primary {
-    background-color: #02087D;
-    color: #fff;
-    border: 1px solid #02087D;
-}
-
-.btn:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-}
-/* Hide Contact Us button by default */
-.nav-menu .no-desktop {
-    display: none;
-}
-
-/* Arrow animation */
-.arrow {
-    display: inline-block;
-    margin-left: 8px;
-    font-size: 18px;
-    animation: arrowMove 0.6s infinite alternate ease-in-out;
-}
-
-@keyframes arrowMove {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(6px);
-    }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        height: 100vh;
-        /* background: #fff; */
-        background: linear-gradient(to left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.8) 100%);
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: clip-path 0.5s ease;
-        clip-path: inset(0 50% 0 50%);
-        z-index: 100;
-    }
-    
-    .nav-menu.active {
-        clip-path: inset(0 0 0 0);
-    }
-    
-    .nav-menu li {
-        margin: 15px 0;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-        z-index: 101;
-    }
-    
-    .cta-buttons {
-        display: none;
-    }
-
-    /* Hamburger menu animation */
-    .mobile-menu-toggle.active span:first-child {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .mobile-menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-toggle.active span:last-child {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    /* Hide Contact Us button by default */
-    .nav-menu .no-desktop {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .nav-menu .no-desktop a {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #02087D;
-        color: white;
-        border-radius: 25px;
-        text-align: center;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.3s ease-in-out;
-        position: relative;
-    }
-
-    .nav-menu .no-desktop a:hover {
-        background-color: #2b3a87;
-        transform: translateY(-2px);
-    }
-}
-
-
+/* Footer CSS Layout for all pages */
 
 /* General Footer */
 .footer-section {
     background: linear-gradient(to bottom, #FDF6E6, #F4FEFC);
+    padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
     color: #666;
@@ -212,15 +16,17 @@ nav ul li a:hover {
     align-items: center;
     gap: 20px;
 }
-
+.footer-row1 p span {
+    display: block; /* Forces each span onto a new line */
+}
 .email-signup {
     margin-left: auto;
     display: flex;
-    max-width: 500px;
     gap: 10px;
 }
 
 .email-input {
+    width: 300px;
     flex: 1;
     padding: 0.5rem;
     border: 1px solid #ddd;
@@ -241,6 +47,8 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .footer-logo {
@@ -251,7 +59,12 @@ nav ul li a:hover {
 .footer-logo:hover {
     transform: scale(1.5);
 }
-
+.footer-logo:hover + .nav-links {
+    margin-top: 50px; /* Moves content down */
+}
+.nav-links {
+    transition: margin-top 0.4s ease-in-out; /* Smooth movement */
+}
 .nav-links {
     display: flex;
     gap: 20px;
@@ -291,6 +104,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     padding: 10px;
+    padding-top: 20px;
 }
 
 .contact-left {
@@ -314,7 +128,7 @@ nav ul li a:hover {
 }
 
 .contact-item:hover i {
-    transform: scale(1.2); /* Slight pop effect */
+    transform: scale(1.5); /* Slight pop effect */
     color: black; /* Change icon color on hover */
 }
 
@@ -383,6 +197,7 @@ nav ul li a:hover {
     background: white;
 }
 
+/* Responsive Design for Footer on mobile */
 @media (max-width: 768px) {
     .footer-section {
     display: flex;
@@ -418,13 +233,13 @@ nav ul li a:hover {
     flex-direction: column; /* Stack input & button vertically */
     align-items: center; /* Centers items inside */
     justify-content: center;
-    width: fit-content; /* Prevents full width */
+    width: fit-content; 
     margin: 0 auto; /* Centers the entire div */
     text-align: center;
 }
 
 .email-input {
-    width: 100%;
+    width: 140%;
 }
 .subscribe-btn {
     width: 60%; 
@@ -529,6 +344,8 @@ hr {
     width: 100%;
     border: 1px solid #ddd;
     margin: 20px 0;
-}   
+}
+
+
 }
 /* End Footer */
