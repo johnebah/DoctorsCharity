@@ -5,7 +5,6 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 0;
-    /* background-color: rgba(255, 255, 255, 0.95); */
     background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
@@ -65,14 +64,24 @@ nav ul li a:hover {
     color: #02087D;
 }
 
+.donate-btn {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: black;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
 .cta-buttons {
     display: flex;
     gap: 10px;
 }
 
-.btn {
-    padding: 8px 20px;
-    border-radius: 25px;
+.contact-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
@@ -83,13 +92,13 @@ nav ul li a:hover {
     color: #02087D;
 }
 
-.btn-primary {
+.contact-btn {
     background-color: #02087D;
     color: #fff;
     border: 1px solid #02087D;
 }
 
-.btn:hover {
+.contact-btn:hover {
     opacity: 0.9;
     transform: translateY(-2px);
 }
@@ -124,7 +133,6 @@ nav ul li a:hover {
         transform: translateX(-50%);
         width: 100%;
         height: 100vh;
-        /* background: #fff; */
         background: linear-gradient(to left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.8) 100%);
         
         display: flex;
@@ -168,27 +176,70 @@ nav ul li a:hover {
 
     /* Hide Contact Us button by default */
     .nav-menu .no-desktop {
+        /* background-color: #333; */
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         margin-top: 20px;
     }
 
     .nav-menu .no-desktop a {
+        justify-content: center;
         display: inline-block;
+        margin-bottom: 10px;
         padding: 12px 24px;
-        background-color: #02087D;
-        color: white;
-        border-radius: 25px;
+        border-radius: 10px;
         text-align: center;
         font-weight: 500;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
         position: relative;
+        width: 150px;
     }
 
     .nav-menu .no-desktop a:hover {
-        background-color: #2b3a87;
+        background-color: #02087D;
         transform: translateY(-2px);
+        color: white;
     }
+    
+    
+}
+
+.donate-btn:hover {
+    background-color: #02087D;
+    transform: translateY(2px);
+    color: white;
+}
+
+/* Target the sibling button inside when .donate-btn is hovered */
+.donate-btn:hover + .contact-btn {
+    background-color: white;
+    transform: translateY(-2px);
+    color: #333;
+    border: 1px solid #333;
+}
+
+.donate-btn:hover + .h-contact {
+    background: transparent;
+    transform: translateY(-2px);
+    color: white;
+    border: 1px solid #333;
+}
+.h-donate:hover {
+    background-color: #02087D;
+    transform: translateY(2px);
+    border-color: #02087D;
+}
+.h-donate {
+    border-radius: 10px;
+    padding: 0.75rem 2rem;
+    margin-right: 10px;
+    color: rgb(224, 205, 205);
+    border: 1px solid rgb(224, 205, 205);
+}
+.h-contact {
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
 }
